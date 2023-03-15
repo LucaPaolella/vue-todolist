@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <div id="app" v-cloak>
         <h1>La mia TODO list</h1>
         <ul>
-            
+            <li v-if="todo.spesa.done = false">{{todo.spesa.text}}</li>
+            <li v-else="todo.spesa.done = true" class="barra">{{todo.spesa.text}}</li>
         </ul>
     </div>
-    
+
 
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
