@@ -9,3 +9,9 @@
 [v-cloack]{
     display: none;
 }
+
+/*main*/
+
+.barra{
+    text-decoration: line-through;
+}
