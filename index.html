@@ -16,6 +16,12 @@
         <ul>
             <li v-if="todo.spesa.done = false">{{todo.spesa.text}}</li>
             <li v-else="todo.spesa.done = true" class="barra">{{todo.spesa.text}}</li>
+
+            <li v-if="todo.nutrireGatto.done = false">{{todo.nutrireGatto.text}}</li>
+            <li v-else="todo.nutrireGatto.done = true" class="barra">{{todo.nutrireGatto.text}}</li>
+
+            <li v-if="todo.lavareMacchina.done = false">{{todo.lavareMacchina.text}}</li>
+            <li v-else="todo.lavareMacchina.done = true" class="barra">{{todo.lavareMacchina.text}}</li>
         </ul>
     </div>
 

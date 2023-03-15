@@ -5,21 +5,22 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            todo:{
-                spesa:{
-                    text:"fare spesa",
-                    done: true
-                },
+            todo: {
 
-                nutrireGatto:{
-                    text:"fare spesa",
-                    done: false
-                },
+                spesa: [
+                    { text: 'Fare spesa' },
+                    { done: true }
+                ],
 
-                lavareMacchina:{
-                    text:"fare spesa",
-                    done: true
-                },
+                nutrireGatto: [
+                    { text: 'Fare spesa' },
+                    { done: false }
+                ],
+
+                lavareMacchina: [
+                    { text: 'Fare spesa' },
+                    { done: true }
+                ],
             }
         }
 
