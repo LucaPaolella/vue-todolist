@@ -5,23 +5,27 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            todo: {
+            todo: [
+                {
+                    nomeTodo: "spesa",
+                    text: "Uscire a fare la spesa",
+                    done: true
+                },
 
-                spesa: [
-                    { text: 'Fare spesa' },
-                    { done: true }
-                ],
+                {
+                    nomeTodo: "NutrireGatto",
+                    text: 'Dare da mangiare a Fiocco',
+                    done: false
+                },
 
-                nutrireGatto: [
-                    { text: 'Fare spesa' },
-                    { done: false }
-                ],
-
-                lavareMacchina: [
-                    { text: 'Fare spesa' },
-                    { done: true }
-                ],
-            }
+                {
+                    nomeTodo: "Lavare Macchina",
+                    text: 'Lavare la mia fantastica Panda',
+                    done: true
+                }     
+            ],
+        
+        barra: document.querySelector('.barra')
         }
 
     }

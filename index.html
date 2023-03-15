@@ -14,14 +14,22 @@
     <div id="app" v-cloak>
         <h1>La mia TODO list</h1>
         <ul>
-            <li v-if="todo.spesa.done = false">{{todo.spesa.text}}</li>
-            <li v-else="todo.spesa.done = true" class="barra">{{todo.spesa.text}}</li>
 
-            <li v-if="todo.nutrireGatto.done = false">{{todo.nutrireGatto.text}}</li>
-            <li v-else="todo.nutrireGatto.done = true" class="barra">{{todo.nutrireGatto.text}}</li>
+            <li v-if="todo[0].done = false">{{todo[0].text}}</li>
+            <li v-else="todo[0].done = true" >
+                <p class="barra">{{todo[0].text}}</p>
+            </li>
 
-            <li v-if="todo.lavareMacchina.done = false">{{todo.lavareMacchina.text}}</li>
-            <li v-else="todo.lavareMacchina.done = true" class="barra">{{todo.lavareMacchina.text}}</li>
+            <li v-if="todo[1].done = false">{{todo[1].text}}</li>
+            <li v-else="todo[1].done = true" >
+                <p class="barra">{{todo[1].text}}</p>
+            </li>
+
+            <li v-if="todo[2].done = false">{{todo[2].text}}</li>
+            <li v-else="todo[2].done = true" >
+                <p class="barra">{{todo[2].text}}</p>
+            </li>
+            
         </ul>
     </div>
 
