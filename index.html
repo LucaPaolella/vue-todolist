@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -15,14 +16,21 @@
         <h1>La mia TODO list</h1>
         <ul>
 
-            <li v-for="todo in todo" :key="index" :class="{ 'done': todo.done }">
+            <li v-for="(todo, index) in todo" :key="index" :class="{ 'done': todo.done }">
                 {{ todo.Text }} -
                 <span v-if="todo.done" class="barra">{{ todo.text }}</span>
                 <span v-else>{{ todo.text }}</span>
+                <i class="fas fa-times" @click="removeTodo(index)"></i>
             </li>
 
         </ul>
     </div>
+
+    <div>
+        <input type="text" v-model="newTodoText" placeholder="Aggiungi nuovo todo">
+        <button @click="addNewTodo">Aggiungi</button>
+    </div>
+      
 
 
 
