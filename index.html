@@ -15,8 +15,12 @@
         <h1>La mia TODO list</h1>
         <ul>
 
-            <li v-for="done in todo" :key="todo.text">{{todo.text}}</li>
-            
+            <li v-for="todo in todo" :key="index" :class="{ 'done': todo.done }">
+                {{ todo.Text }} -
+                <span v-if="todo.done" class="barra">{{ todo.text }}</span>
+                <span v-else>{{ todo.text }}</span>
+            </li>
+
         </ul>
     </div>
 
